@@ -43,7 +43,8 @@ http://localhost:3000
 
 The application is deployed using Vercel. You can access the live demo here:
 
-🔗 https://pptx-konva-editor-cnifmko38-primehta17s-projects.vercel.app/
+<!-- 🔗 https://pptx-konva-editor-cnifmko38-primehta17s-projects.vercel.app/ -->
+🔗 https://pptx-konva-editor.vercel.app/
 
 📄 Repository
 
