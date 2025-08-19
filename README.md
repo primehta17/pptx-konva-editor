@@ -15,8 +15,6 @@ Image Upload: Add images via URLs or file uploads.
 Export Options: Save slides as PNG images or export the entire deck as a JSON file.
 
 PPTX Import: Load slides from PowerPoint files.
-konvajs.org
-+1
 
 🧪 Run Locally
 
@@ -45,7 +43,7 @@ http://localhost:3000
 
 The application is deployed using Vercel. You can access the live demo here:
 
-🔗 https://your-demo-url.vercel.app
+🔗 https://pptx-konva-editor-cnifmko38-primehta17s-projects.vercel.app/
 
 📄 Repository
 

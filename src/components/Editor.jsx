@@ -245,7 +245,7 @@ export default function Editor() {
           <div className="toolbar">
             <button onClick={addRect}>Add Rect</button>
             <button onClick={addText}>Add Text</button>
-            <button onClick={() => { const url = prompt('Image URL'); if (url) addImageFromUrl(url) }}>Add Image(URL)</button>
+            {/* <button onClick={() => { const url = prompt('Image URL'); if (url) addImageFromUrl(url) }}>Add Image(URL)</button> */}
             <button onClick={removeSelected}>Delete</button>
           </div>
 
