@@ -1,27 +1,86 @@
-# PPTX Konva Editor (Scaffold)
+# PPTX Konva Editor
 
-This is a lightweight React + Vite scaffold that uses **react-konva / Konva** for slide editing.
-It provides:
-- Upload placeholder for `.pptx` (parsing not implemented in scaffold; placeholder slide created)
-- Slide thumbnails rail
-- Canvas editor with objects (rect, ellipse, text, image)
-- Select / move / resize / rotate with Konva Transformer
-- Inline text edit (double-click)
-- Save/Load JSON
-- Export single slide as PNG
+This React-based slide editor leverages the Konva.js library to create a dynamic canvas for building and editing slides. Users can add text, shapes, and images, and export their creations as PNGs or JSON files. The editor also supports importing slides from PowerPoint files.
 
-## Run locally
+🚀 Features
 
-1. Install dependencies:
-   ```
-   npm install
-   ```
-2. Start dev server:
-   ```
-   npm run dev
-   ```
+Interactive Canvas: Drag and resize text, shapes, and images.
 
-## Notes
+Slide Management: Add, delete, and navigate through slides.
 
-- This scaffold **does not** parse PPTX files — it provides placeholders and an editor UI to continue development.
-- To implement PPTX parsing: use `JSZip` to unzip `.pptx` and parse `ppt/slides/slideN.xml` (OOXML); or use a conversion API to SVG and map elements into the editor model.
+Text Editing: Double-click to edit text directly on the canvas.
+
+Image Upload: Add images via URLs or file uploads.
+
+Export Options: Save slides as PNG images or export the entire deck as a JSON file.
+
+PPTX Import: Load slides from PowerPoint files.
+konvajs.org
++1
+
+🧪 Run Locally
+
+Clone the repository:
+
+git clone https://github.com/primehta17/pptx-konva-editor.git
+cd pptx-konva-editor
+
+
+Install dependencies:
+
+npm install
+
+
+Start the development server:
+
+npm run dev
+
+
+Open your browser and navigate to:
+
+http://localhost:3000
+
+
+📦 Deployment
+
+The application is deployed using Vercel. You can access the live demo here:
+
+🔗 https://your-demo-url.vercel.app
+
+📄 Repository
+
+The source code is available on GitHub:
+
+🔗 https://github.com/primehta17/pptx-konva-editor.git
+
+📝 Approach & Considerations
+
+This project utilizes React for the UI and Konva.js for rendering the canvas elements. The useImage hook is employed to load images, and a custom transformer is used to enable resizing and rotating objects.
+
+Trade-offs:
+
+Performance: Handling large PPTX files may lead to performance issues due to parsing overhead.
+
+Cross-Origin Images: Loading images from external URLs may result in CORS issues, affecting image rendering and export functionality.
+
+Future Enhancements:
+
+Image Upload: Implement a file input to allow users to upload pptx images directly from their devices.
+
+Export Formats: Support additional export formats such as PDF or SVG.
+
+Undo/Redo Functionality: Implement undo and redo capabilities for better user experience.
+
+⚠️ Known Issues
+
+Image Upload: Currently, the image upload feature is not functional. This is due to limitations in handling image uploads within the Konva.js framework.
+
+🛠️ Dependencies
+
+react-konva: React bindings for Konva.js.
+
+use-image: React hook for loading images.
+
+jszip: Library for creating and reading ZIP files.
+
+fast-xml-parser: XML parser for JavaScript.
