@@ -1,19 +1,16 @@
-// src/lib/pptxParser.js
 import JSZip from "jszip";
 import { XMLParser } from "fast-xml-parser";
 
-// Parse a PPTX file into slides usable in Editor.jsx
 export async function parsePptxFile(file, { width = 960, height = 540 } = {}) {
   const zip = await JSZip.loadAsync(file);
   const parser = new XMLParser({ ignoreAttributes: false });
 
   const slides = [];
 
-  // Get all slide XML files
   const slideFiles = Object.keys(zip.files).filter((f) =>
     f.match(/^ppt\/slides\/slide\d+\.xml$/)
   );
-  slideFiles.sort(); // ensure slide1, slide2 order
+  slideFiles.sort();
 
   for (const slidePath of slideFiles) {
     const xml = await zip.file(slidePath).async("text");

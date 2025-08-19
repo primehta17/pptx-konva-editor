@@ -1,8 +1,6 @@
-// src/components/Editor.jsx
 import React, { useRef, useState, useEffect } from 'react'
 import { Stage, Layer, Rect, Text, Image as KImage, Transformer } from 'react-konva'
-import { parsePptxFile } from '../lib/pptxParser' // ensure this file exists
-/* NOTE: install dependencies: npm install jszip fast-xml-parser */
+import { parsePptxFile } from '../lib/pptxParser' 
 
 /* simple image loader hook */
 function useImage(url) {
